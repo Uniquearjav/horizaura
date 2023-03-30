@@ -1,14 +1,18 @@
 {
-    "builds": [
-      {
-        "src": "horizaura/wsgi.py",
-        "use": "@vercel/python"
+  "version": 2,
+  "builds": [
+    {
+      "src": "horizaura",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "horizaura/wsgi.py"
-      }
-    ]
-  }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "horizaura/server.py"
+    }
+  ]
+}
