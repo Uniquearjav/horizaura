@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "horizaura/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "horizaura/wsgi.py"
+      }
+    ]
+  }

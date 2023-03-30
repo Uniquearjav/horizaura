@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+{% block title %}{% endblock title %}
+{% block content %}
+<!-- add the products in block form -->
+<div class="container">
+    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price }}</p>
+    <form action="{% url 'add_to_cart' product.id %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Add to cart" class="btn btn-primary">
+    </form>
+</div>
+{% endblock content %}
