@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-ethmg@x4dag_f2tctmy012%5pgjsh)rfw3i&a6@4i+tbz!ap_f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# settings.py
+
+# Add 'horizaura-c020cgbhb-uniquearjav.vercel.app' to ALLOWED_HOSTS
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.vercel.app']
+
+# You can also use a wildcard to allow any host
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
