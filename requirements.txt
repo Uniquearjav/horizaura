@@ -1,4 +1,6 @@
 Django==4.1.7
-django-browser-reload==1.6.0
-pysqlite3==0.4.6
-
+asgiref==3.5.2
+psycopg2-binary==2.9.5
+sqlparse==0.4.3
+tzdata==2022.7
+whitenoise==6.2.0
