@@ -1,0 +1,19 @@
+import ProductCard from "@/components/productcard"
+
+export default async function Store() {
+  // fetch data from the API
+  const res = await fetch('http://localhost:3000/api/products', { cache: 'no-store'})
+  const data = await res.json()
+  console.log(data)
+  return (
+    <div className="container g">
+      <h1>Store</h1>
+      <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+      {data.map((product) => (
+        <ProductCard key={product["asin1"]} product={product} />
+      ))
+      }
+      </div>
+    </div>
+  )
+}
