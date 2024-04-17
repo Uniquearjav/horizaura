@@ -35,24 +35,24 @@ export default function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 text-4xl" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" className="font-semibold text-xl" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem >
-        <Link color="foreground" href="/store">
+        <Link color="foreground" className="font-semibold text-xl" href="/store">
             Store
           </Link>
         </NavbarItem>
         <NavbarItem>
-        <Link color="foreground" href="/blog">
+        <Link color="foreground" className="font-semibold text-xl" href="/blog">
             Blog
           </Link>
         </NavbarItem>
         <NavbarItem >
-        <Link color="foreground" href="/Contact_Us">
+        <Link color="foreground" className="font-semibold text-xl" href="/Contact_Us">
             Contact Us
           </Link>
         </NavbarItem>
