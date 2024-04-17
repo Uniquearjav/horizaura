@@ -2,7 +2,7 @@ import ProductCard from "@/components/productcard"
 
 export default async function Store() {
   // fetch data from the API
-  const res = await fetch('http://localhost:3000/api/products', { cache: 'no-store'})
+  const res = await fetch(`http://${process.env.DOMAIN}/api/products`, { cache: 'no-store'})
   const data = await res.json()
   console.log(data)
   return (
