@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import {Providers} from "./providers";
 import Head from "next/head";
 import Footer from "@/components/footer";
+import { Analytics } from '@vercel/analytics/react';
 
 
 const poppins = Poppins({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           <Header />
           <div>{children}</div>
           <Footer />
+          <Analytics />
         </ThemeProvider>
         </Providers>
         </body>
