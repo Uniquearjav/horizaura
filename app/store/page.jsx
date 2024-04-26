@@ -6,9 +6,9 @@ export default async function Store() {
   const data = await res.json()
   console.log(data)
   return (
-    <div className="container g">
+    <div classNameName="container g">
       <h1>Store</h1>
-      <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+      <div classNameNameName="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
       {data.map((product) => (
         <ProductCard key={product["asin1"]} product={product} />
       ))

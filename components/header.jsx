@@ -30,8 +30,8 @@ export default function Header() {
           className="sm:hidden"
         />
         <NavbarBrand>
-        <Image src={Logo} height={80} width={80} alt="Horizaura Logo" priority />
-          <p className=" p-5 text-4xl font-semibold text-inherit">HORIZAURA</p>
+        <Image src={Logo} className="max-md:h-1/2 max-md:w-1/3" height={80} width={80} alt="Horizaura Logo" priority />
+          <p className=" p-5 sm:p-0 max-md:p-0 max-md:text-3xl text-4xl font-semibold text-inherit">HORIZAURA</p>
         </NavbarBrand>
       </NavbarContent>
 

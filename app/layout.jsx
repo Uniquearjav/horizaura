@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/themeprovider";
 import Header from "@/components/header";
 import {Providers} from "./providers";
 import Head from "next/head";
+import Footer from "@/components/footer";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,11 +23,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head><link rel="icon" href="/favicon.ico" sizes="any" /></Head>
-       <body className={cn("min-h-screen bg-background font-sans antialiased ", poppins?.className || '')}>
+       <body className={cn("min-h-screen dark:bg-gray-900 bg-background font-sans antialiased ", poppins?.className || '')}>
         <Providers>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange >
           <Header />
           <div>{children}</div>
+          <Footer />
         </ThemeProvider>
         </Providers>
         </body>

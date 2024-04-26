@@ -1,40 +1,44 @@
-"use client"
-import * as React from "react"
-// import Autoplay from "embla-carousel-react"
+import Carousel from 'react-bootstrap/Carousel';
+import ExampleCarouselImage from '@/public/media/HZ.jpg';
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
-export function CarouselDemo() {
+export default function CarouselDemo() {
   return (
-    <Carousel className="w-full max-w-xs"
-    // plugins={[
-    //     Autoplay({
-    //       delay: 2000,
-    //     }),
-    //   ]}
-      >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+    <Carousel>
+      <Carousel.Item interval={1000}>
+        <img
+          className="d-block w-100"
+          src={ExampleCarouselImage}
+          alt="First slide"
+          />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={500}>
+        <img
+          className="d-block w-100"
+          src={ExampleCarouselImage}
+          alt="First slide"
+          />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={ExampleCarouselImage}
+          alt="First slide"
+          />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
     </Carousel>
-  )
+  );
 }
