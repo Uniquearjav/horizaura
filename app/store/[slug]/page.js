@@ -1,9 +1,10 @@
-export default function IndivisualProduct({params}) {
-  console.log(params.slug)
-  const products = params.slug
+export default async function IndivisualPage({ params }) {
+  const res = await fetch(`/api/products/${params.slug}`)
+  const post = await res.json()
+ 
   return (
-    <>
-    <h1>Product = {products}</h1>
-    </>
+    <div>
+      <h1>{post.asin1}</h1>
+    </div>
   )
 }
