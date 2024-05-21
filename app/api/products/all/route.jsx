@@ -102,12 +102,5 @@ export const productsArray = [
     }]
 
     export function GET(request){
-      // get the query object from the request
-      const searchParams = request.nextUrl.searchParams.get('asin')
-      const searchParams2 = request.nextUrl.searchParams.get('all')
-
-      // search the products array for the product with the asin
-      const product = productsArray.find(product => product.asin1 === searchParams)
-      console.log(product)
-      return NextResponse.json(product)
+      return NextResponse.json(productsArray)
     }

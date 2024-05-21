@@ -11,11 +11,11 @@ export default function Footer() {
         <footer className="p-5 bg-blue-300 dark:bg-black">
             <div className="text-center">
     <Link href="/" className="flex items-center m-5 justify-center text-2xl font-semibold text-black dark:text-white">
-        <Image src={Logo} height={60} width={60} className="h-full mr-3 max-sm:h-9" alt="Horizaura Logo" />
+        <Image src={Logo} height={60} width={60} className="h-full mr-3 max-sm:h-9" alt="Horizaura Logo" priority />
 		<p className="text-4xl">Horizaura</p>
     </Link>
 
-    <span className="block text-sm text-center text-gray-500">© 2024 Horizaura. All Rights Reserved.
+    <span className="block text-sm text-center text-black">© 2024 Horizaura. All Rights Reserved.
 	</span>
 
     <ul className="flex justify-center m-5 space-x-5">
