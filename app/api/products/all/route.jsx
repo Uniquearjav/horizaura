@@ -17,7 +17,7 @@ export const productsArray = [
       "expedited_shipping": "",
       "product_id": "B0CZ79XKS2",
       "Business Price": "",
-      "image_url": "https://m.media_amazon.com/images/I/41DMGgIm+BL.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/41DMGgIm+BL.jpg",
       "maximum_retail_price": 35000
     },
     {
@@ -36,7 +36,7 @@ export const productsArray = [
       "will_ship_internationally": "",
       "expedited_shipping": "",
       "product_id": "B0CY9D8CMK",
-      "image_url": "https://m.media_amazon.com/images/I/316XxEgxrUL.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/316XxEgxrUL.jpg",
       "Business Price": "",
       "maximum_retail_price": 24000
     },
@@ -57,7 +57,7 @@ export const productsArray = [
       "expedited_shipping": "",
       "product_id": "B0CYL81X3S",
       "Business Price": "",
-      "image_url": "https://m.media_amazon.com/images/I/314KqYO1ceL.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/314KqYO1ceL.jpg",
       "maximum_retail_price": 24000
     },
     {
@@ -77,7 +77,7 @@ export const productsArray = [
       "expedited_shipping": "",
       "product_id": "B0CZ7B7PKQ",
       "Business Price": "",
-      "image_url": "https://m.media_amazon.com/images/I/51IMeXBr+KL.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/51IMeXBr+KL.jpg",
       "maximum_retail_price": 15000
     },
     {
@@ -97,7 +97,7 @@ export const productsArray = [
       "expedited_shipping": "",
       "product_id": "B0CY9GK2VZ",
       "Business Price": 0,
-      "image_url": "https://m.media_amazon.com/images/I/41JmK9gkXVL.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/41JmK9gkXVL.jpg",
       "maximum_retail_price": 25000
     }]
 
