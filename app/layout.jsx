@@ -7,6 +7,7 @@ import {Providers} from "./providers";
 import Head from "next/head";
 import Footer from "@/components/footer";
 import { Analytics } from '@vercel/analytics/react';
+import Script from "next/script";
 
 
 const poppins = Poppins({
@@ -30,8 +31,8 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange >
           <Header />
           <div>{children}</div>
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9405103571986725"
-     crossorigin="anonymous"></script>
+          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9405103571986725"
+     crossorigin="anonymous" lazyOnload></Script>
           <Footer />
           <Analytics />
         </ThemeProvider>
