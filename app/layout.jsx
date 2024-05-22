@@ -29,6 +29,8 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange >
           <Header />
           <div>{children}</div>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9405103571986725"
+     crossorigin="anonymous"></script>
           <Footer />
           <Analytics />
         </ThemeProvider>
