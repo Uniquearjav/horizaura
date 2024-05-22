@@ -1,5 +1,14 @@
 import ProductCard from "@/components/productcard"
 
+
+export function metadata(){
+  return {
+    title: "Store | Horizaura",
+    description: "Horizaura: Enhancing homes with beautifully crafted elegance. Explore our stunning selection of sofas, home decor, and captivating resin plates. Experience the blend of artistic craftsmanship and comfort in every aspect. Welcome to a world where creativity meets refined style.",
+  }
+}
+
+
 export default async function Store() {
   // fetch data from the API
   const res = await fetch(`http://${process.env.DOMAIN}/api/products/all`, { cache: 'no-store'})

@@ -1,6 +1,21 @@
 import { GrAmazon } from "react-icons/gr";
 import { BsCurrencyRupee } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
+
+export async function generateMetadata({ params}) {
+  const slug = params.slug
+ 
+  // fetch data
+  const productmeta = await fetch(`https://horizaura.vercel.app/api/products?asin=${slug}`).then((res) => res.json())
+ 
+  // optionally access and extend (rather than replace) parent metadata 
+  return {
+    title: `Horizaura - ${productmeta.item_name}`,
+    description: productmeta.item_description,
+    author: 'Arjav Choudhary',
+  }
+}
 
 export default async function IndivisualPage({ params }) {
   console.log(params.slug)
@@ -20,9 +35,11 @@ export default async function IndivisualPage({ params }) {
           <p className="leading-relaxed">{product.item_description}</p>
           <div className="flex m-5">
             <span className="title-font dark:text-white font-medium text-2xl flex items-center text-gray-900"><BsCurrencyRupee />{INRIndia.format(product.price)}</span>
+            {/* <Link href={`https://www.amazon.in/dp/${product.asin1}/`}> */}
             <button className="flex ml-auto items-center text-white dark:bg-black bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
               Buy from Amazon <GrAmazon className="m-2" />
             </button>
+            {/* </Link> */}
           </div>
         </div>
       </div>
