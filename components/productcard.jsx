@@ -1,4 +1,4 @@
-import { IndianRupee } from "lucide-react";
+import { BsCurrencyRupee } from "react-icons/bs";
 import Image from "next/image"
 import Link from "next/link"
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
@@ -15,7 +15,7 @@ export default function ProductCard({ product}) {
                 <span className="text-gray-400 mr-3  uppercase text-xs">HORIZAURA</span>
                 <p className="text-lg font-bold text-black dark:text-white truncate block capitalize">{ product.item_name}</p>
                 <div className="flex items-center">
-                  <p className="text-lg font-semibold text-black dark:text-white cursor-auto my-3"> <span className="flex items-center"> <IndianRupee /> {INRIndia.format(product["price"])}</span></p>
+                  <p className="text-lg font-semibold text-black dark:text-white cursor-auto my-3"> <span className="flex items-center"> <BsCurrencyRupee /> {INRIndia.format(product.price)}</span></p>
                   <div className="ml-auto">
                   <PiShoppingCartSimpleLight className="text-2xl" />
                   </div>

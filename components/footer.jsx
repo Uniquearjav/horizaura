@@ -15,7 +15,7 @@ export default function Footer() {
 		<p className="text-4xl">Horizaura</p>
     </Link>
 
-    <span className="block text-sm text-center text-black">© 2024 Horizaura. All Rights Reserved.
+    <span className="block text-sm text-center dark:text-white text-black">© 2024 Horizaura. All Rights Reserved.
 	</span>
 
     <ul className="flex justify-center m-5 space-x-5">
