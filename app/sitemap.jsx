@@ -11,7 +11,7 @@ export async function ProductsUrl() {
             url: `${BASE_URL}/store/${product.asin1}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
-            priority: 1,
+            priority: 0.8,
         }));
     } catch (error) {
         console.error('Error fetching products:', error);
