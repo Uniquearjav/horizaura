@@ -25,14 +25,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head><link rel="icon" href="/favicon.ico" sizes="any" /></Head>
+      <Head><link rel="icon" href="/favicon.ico" sizes="any" />
+                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9405103571986725"
+     crossorigin="anonymous" strategy="lazyOnload"
+></Script>
+     </Head>
        <body className={cn("min-h-screen dark:bg-gray-900 bg-background font-sans antialiased ", poppins?.className || '')}>
         <Providers>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange >
           <Header />
           <div>{children}</div>
-          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9405103571986725"
-     crossorigin="anonymous" lazyOnload></Script>
           <Footer />
           <Analytics />
         </ThemeProvider>
