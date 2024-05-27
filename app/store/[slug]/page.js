@@ -7,7 +7,7 @@ export async function generateMetadata({ params}) {
   const slug = params.slug
  
   // fetch data
-  const productmeta = await fetch(`https://horizaura.vercel.app/api/products?asin=${slug}`).then((res) => res.json())
+  const productmeta = await fetch(`https://horizaura.vercel.app/api/products?product_id=${slug}`).then((res) => res.json())
  
   // optionally access and extend (rather than replace) parent metadata 
   return {
