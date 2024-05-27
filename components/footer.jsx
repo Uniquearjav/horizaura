@@ -17,6 +17,7 @@ export default function Footer() {
 
     <span className="block text-sm text-center dark:text-white text-black">© 2024 Horizaura. All Rights Reserved.
 	</span>
+    <span className="block text-sm text-center dark:text-white text-black">Owner - Arjav Choudhary</span>
 
     <ul className="flex justify-center m-5 space-x-5">
         <li>
