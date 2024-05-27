@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button, link} from "@nextui-org/react";
 import Logo from '@/public/horizaura.svg'
 import Image from 'next/image'
 import { ModeToggle } from "./themeswitcher";
@@ -10,16 +10,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { name: "Home", link: "/" },
+    { name: "Store", link: "/store" },
+    { name: "Blog", link: "/blog" },
+    { name: "Contact Us", link: "/Contact_Us" },
   ];
 
   return (
@@ -63,18 +57,9 @@ export default function Header() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
+        {menuItems.map((item) => (
+          <NavbarMenuItem key={item.name}>
+            <Link href={item.link}>{item.name}</Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
