@@ -3,7 +3,7 @@ import { BsCurrencyRupee } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 
-export async function generateMetadata({ params}) {
+export async function IndivisualMetadata({ params}) {
   const slug = params.slug
  
   // fetch data

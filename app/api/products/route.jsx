@@ -7,7 +7,8 @@ import { productsArray } from './all/route'
       const searchParams = request.nextUrl.searchParams.get('product_id')
 
       // search the products array for the product with the asin
-      const product = productsArray.find(product => product.product_id === searchParams)
+      const product = productsArray.find(product => product.asin1 === searchParams)
+      console.log(searchParams)
       console.log(product)
       return NextResponse.json(product)
     }
