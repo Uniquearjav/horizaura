@@ -15,14 +15,14 @@ export default function Home() {
      <img src="/media/bg.webp" alt="Background Image" className="absolute inset-0 w-full h-full object-cover filter blur-sm" />
      <div className="absolute inset-0 bg-black bg-opacity-10 dark:bg-opacity-60"></div>
      <div className="absolute inset-0 flex flex-col items-center justify-center">
-    <Image src={Name} />
+    <Image src={Name} alt="Nirvatatva" />
          <p className="text-xl max-md:text-xl m-2 text-white mt-4">Handcrafted treasures, bringing your vision to life with style.</p>
      </div>
  </div>
  <section className="bg-white dark:bg-gray-900">
     <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">We also sell customized Sofas</h1>
-        <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Find your perfect sofa with custom options. Choose fabrics and designs that match your style, making your sofa uniquely yours for a cozy home.</p>
+        <p className="mb-8 text-lg font-normal text-gray-700 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-100">Find your perfect sofa with custom options. Choose fabrics and designs that match your style, making your sofa uniquely yours for a cozy home.</p>
         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <Link href="/store" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                 Shop Now !!
@@ -34,8 +34,8 @@ export default function Home() {
             </Link>  
         </div>
         <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-            <span className="font-semibold text-gray-400 uppercase">FEATURED IN</span>
-            <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+            <span className="font-semibold text-black dark:text-white uppercase">FEATURED IN</span>
+            <div className="flex flex-wrap justify-center items-center mt-8 text-black dark:text-white sm:justify-between">
                 <Link href="#" className="flex items-center mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
                 <SiGooglemybusiness size={50} />
                 <p className="font-bold text-2xl p-2">Google Business</p>               
