@@ -1,20 +1,21 @@
-
-import Image from "next/image";
 import Link from "next/link";
 import { SiGooglemybusiness,SiFacebook,SiInstagram } from "react-icons/si";
 import { IoCall } from "react-icons/io5";
 import Carousel from "@/components/heroproduct";
 import { TbArrowRight } from "react-icons/tb";
-// import CarouselDemo from "@/components/heroproduct";
+import Header from "@/components/header_landing";
+import Name from "@/public/preview.svg";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
+    <Header />
      <div className="relative h-screen w-full">
-     <img src="/media/HZ.jpg" alt="Background Image" className="absolute inset-0 w-full h-full object-cover filter blur-sm" />
+     <img src="/media/bg.webp" alt="Background Image" className="absolute inset-0 w-full h-full object-cover filter blur-sm" />
      <div className="absolute inset-0 bg-black bg-opacity-10 dark:bg-opacity-60"></div>
      <div className="absolute inset-0 flex flex-col items-center justify-center">
-         <h1 className=" max-md:text-6xl text-7xl lg:text-8xl xl:text-9xl text-white font-bold">Horizaura</h1>
+    <Image src={Name} />
          <p className="text-xl max-md:text-xl m-2 text-white mt-4">Handcrafted treasures, bringing your vision to life with style.</p>
      </div>
  </div>

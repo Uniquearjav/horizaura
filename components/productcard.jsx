@@ -13,7 +13,7 @@ export default function ProductCard({ product}) {
               <Image src={`${product.image_url}`} alt={`${product.item_name}, ID - Price - Rs. ${product.price}`} width={288} height={320} className="h-80 w-72 object-cover rounded-t-xl" />
               </Link>
               <div className="px-4 py-3 w-72">
-                <span className="text-gray-400 mr-3  uppercase text-xs">HORIZAURA</span>
+                <span className="text-gray-400 mr-3  uppercase text-xs">nirvatatva</span>
                 <Link href={`/store/${product.asin1}`}>
                 <p className="text-lg font-bold text-black dark:text-white truncate block capitalize">{ product.item_name}</p>
                 </Link>
