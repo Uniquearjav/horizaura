@@ -21,27 +21,27 @@ export default function Footer() {
 
     <ul className="flex justify-center m-5 space-x-5">
         <li>
-            <Link href={process.env.INSTAGRAM} className="text-gray-500 dark:hover:text-white hover:text-black">
+            <Link href={process.env.INSTAGRAM} aria-label="Link for Instagram" className="text-gray-500 dark:hover:text-white hover:text-black">
             <FaInstagram  size={25}  />
             </Link>
         </li>
         <li>
-            <Link href={process.env.FACEBOOK} className="text-gray-500 dark:hover:text-white hover:text-black">
+            <Link href={process.env.FACEBOOK} aria-label="Link for Facebook" className="text-gray-500 dark:hover:text-white hover:text-black">
             <FaFacebookF size={25}  />
             </Link>
         </li>
         <li>
-            <Link href={process.env.GOOGLE_BUSINESS} className="text-gray-500 dark:hover:text-white hover:text-black">
+            <Link href={process.env.GOOGLE_BUSINESS} aria-label="Link for Google Business" className="text-gray-500 dark:hover:text-white hover:text-black">
             <SiGooglemybusiness size={25}  />
             </Link>
         </li>
         <li>
-            <Link href={process.env.TWITTER} className="text-gray-500 dark:hover:text-white hover:text-black">
+            <Link href={process.env.TWITTER} aria-label="Link for Twitter" className="text-gray-500 dark:hover:text-white hover:text-black">
             <FaXTwitter size={25}  />
             </Link>
         </li>
         <li>
-            <Link href={process.env.AMAZON} className="text-gray-500 dark:hover:text-white hover:text-black">
+            <Link href={process.env.AMAZON} aria-label="Link for Amazon" className="text-gray-500 dark:hover:text-white hover:text-black">
             <FaAmazon size={25} />
             </Link>
         </li>
