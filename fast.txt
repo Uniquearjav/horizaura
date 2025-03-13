@@ -1,9 +1,0 @@
-href={process.env.INSTAGRAM}
-
-href={process.env.GOOGLE_BUSINESS}
-
-href={process.env.FACEBOOK}
-
-href={process.env.AMAZON}
-
-href={process.env.TWITTER}

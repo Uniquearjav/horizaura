@@ -1,0 +1,87 @@
+[
+    {
+        "id": "p001",
+        "name": "Wireless Bluetooth Headphones",
+        "description": "High-quality sound with noise cancellation feature, perfect for music lovers.",
+        "price": 149.99,
+        "category": "Electronics",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+        "inStock": true,
+        "rating": 4.7,
+        "reviews": 245,
+        "specs": {
+            "brand": "SoundWave",
+            "color": "Black",
+            "connectivity": "Bluetooth 5.0",
+            "batteryLife": "20 hours"
+        }
+    },
+    {
+        "id": "p002",
+        "name": "Ultra HD Smart TV",
+        "description": "55-inch 4K display with smart features and voice control.",
+        "price": 699.99,
+        "category": "Electronics",
+        "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575",
+        "inStock": true,
+        "rating": 4.5,
+        "reviews": 189,
+        "specs": {
+            "brand": "VisionTech",
+            "screenSize": "55 inches",
+            "resolution": "4K Ultra HD",
+            "hdmiPorts": 3
+        }
+    },
+    {
+        "id": "p003",
+        "name": "Ergonomic Office Chair",
+        "description": "Comfortable chair with lumbar support for long working hours.",
+        "price": 249.99,
+        "category": "Furniture",
+        "imageUrl": "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c",
+        "inStock": true,
+        "rating": 4.3,
+        "reviews": 120,
+        "specs": {
+            "material": "Mesh and leather",
+            "color": "Gray",
+            "maxWeight": "300 lbs",
+            "adjustable": true
+        }
+    },
+    {
+        "id": "p004",
+        "name": "Coffee Maker",
+        "description": "Programmable coffee machine with 12-cup capacity.",
+        "price": 79.99,
+        "category": "Kitchen Appliances",
+        "imageUrl": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9",
+        "inStock": false,
+        "rating": 4.0,
+        "reviews": 98,
+        "specs": {
+            "brand": "BrewMaster",
+            "capacity": "12 cups",
+            "programmable": true,
+            "color": "Stainless Steel"
+        }
+    },
+    {
+        "id": "p005",
+        "name": "Running Shoes",
+        "description": "Lightweight and comfortable shoes for runners.",
+        "price": 89.99,
+        "category": "Footwear",
+        "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+        "inStock": true,
+        "rating": 4.6,
+        "reviews": 215,
+        "specs": {
+            "brand": "SpeedRunner",
+            "size": "Available in 7-12",
+            "color": "Blue/White",
+            "material": "Synthetic mesh"
+        }
+    }
+]
