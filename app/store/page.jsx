@@ -33,6 +33,7 @@ export default function StorePage() {
     const [currentPage, setCurrentPage] = useState(1)
     const productsPerPage = 12
     const router = useRouter()
+    const [quantities, setQuantities] = useState({});
 
     // Get unique categories from products
     const categories = ["all", ...new Set(products.map(product => product.category))]
@@ -91,6 +92,29 @@ export default function StorePage() {
             name: product.name,
             price: product.price,
             imageUrl: product.imageUrl,
+            quantity: getQuantity(product.id)
+        }));
+        
+        // Reset quantity after adding to cart
+        setQuantities(prev => ({
+            ...prev,
+            [product.id]: 1
+        }));
+    };
+
+    const getQuantity = (productId) => quantities[productId] || 1;
+    
+    const increaseQuantity = (productId) => {
+        setQuantities(prev => ({
+            ...prev,
+            [productId]: (prev[productId] || 1) + 1
+        }));
+    };
+    
+    const decreaseQuantity = (productId) => {
+        setQuantities(prev => ({
+            ...prev,
+            [productId]: Math.max(1, (prev[productId] || 1) - 1)
         }));
     };
 
@@ -164,20 +188,54 @@ export default function StorePage() {
                                     <p className="font-medium text-lg">${product.price.toFixed(2)}</p>
                                     <p className="text-sm text-gray-500 line-clamp-2 mt-1">{product.description}</p>
                                 </CardContent>
-                                <CardFooter className="p-4 flex gap-2">
-                                    <Button 
-                                        variant="default" 
-                                        className="w-full"
-                                        onClick={() => handleProductClick(product.id)}
-                                    >
-                                        View Details
-                                    </Button>
-                                    <Button 
-                                        variant="outline" 
-                                        onClick={() => handleAddToCart(product)}
-                                    >
-                                        Add to Cart
-                                    </Button>
+                                <CardFooter className="p-4 flex flex-col gap-2">
+                                    <div className="flex items-center justify-between w-full mb-2">
+                                        <div className="text-sm font-medium">Quantity:</div>
+                                        <div className="flex border rounded">
+                                            <button 
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    decreaseQuantity(product.id);
+                                                }}
+                                                className="px-2 py-0.5 border-r hover:bg-gray-100"
+                                                aria-label="Decrease quantity"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="px-3 py-0.5">
+                                                {getQuantity(product.id)}
+                                            </span>
+                                            <button 
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    increaseQuantity(product.id);
+                                                }}
+                                                className="px-2 py-0.5 border-l hover:bg-gray-100"
+                                                aria-label="Increase quantity"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex gap-2 w-full">
+                                        <Button 
+                                            variant="default" 
+                                            className="w-full"
+                                            onClick={() => handleProductClick(product.id)}
+                                        >
+                                            View Details
+                                        </Button>
+                                        <Button 
+                                            variant="outline" 
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleAddToCart(product);
+                                            }}
+                                        >
+                                            Add to Cart
+                                        </Button>
+                                    </div>
                                 </CardFooter>
                             </Card>
                         ))}
